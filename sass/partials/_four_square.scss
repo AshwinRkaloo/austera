@@ -1,0 +1,85 @@
+/* SECTION FOUR_SQUARE */
+section#four_square{
+
+    .photo {
+        height: 430px;
+        @include flexbox();
+        @include justify-content(center);
+        @include align-items(center);
+        margin: 0 -0.5rem;
+               
+
+        &1 {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../img/photo1.png') no-repeat;            
+
+            &:hover {
+                background: linear-gradient(rgba(map-get($colors, blue),0.7), rgba(map-get($colors, blue),0.7)),url('../img/photo1.png') no-repeat;
+            }
+        }
+
+        &2 {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../img/photo2.png') no-repeat;
+
+            &:hover {
+                background: linear-gradient(rgba(map-get($colors, blue),0.7), rgba(map-get($colors, blue),0.7)),url('../img/photo2.png') no-repeat;
+            }
+        }
+
+        &3 {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../img/photo3.png') no-repeat;
+
+            &:hover {
+                background: linear-gradient(rgba(map-get($colors, blue),0.7), rgba(map-get($colors, blue),0.7)),url('../img/photo3.png') no-repeat;
+            }
+        }
+
+        &4 {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../img/photo4.png') no-repeat;
+
+            &:hover {
+                background: linear-gradient(rgba(map-get($colors, blue),0.7), rgba(map-get($colors, blue),0.7)),url('../img/photo4.png') no-repeat;
+            }
+        }
+
+        // &1:hover, &2:hover, &3:hover, &4:hover {
+        //     background: linear-gradient(rgba(map-get($colors, blue),0.7), rgba(map-get($colors, blue),0.7)),
+        // }
+    }
+
+    h3 {
+        color: map-get($colors, white);
+        padding: 0 2rem;
+        
+    }
+}
+
+/*  MEDIA QUERIES */
+@media only screen and (max-width: 48em) {
+
+    section#four_square {
+
+        h3 {
+            padding: 30% 15%;
+        }
+
+        .photo1,.photo2,.photo3,.photo4 {
+            width: 65%;
+            margin: 20px auto;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 40em) {
+    section#four_square {
+
+        h3 {
+            padding: 30% 15%;
+        }
+        
+        .photo1,.photo2,.photo3,.photo4 {
+            width: 78%;
+            margin: 20px auto;
+        }
+    }
+}

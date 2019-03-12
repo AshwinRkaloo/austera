@@ -1,0 +1,245 @@
+/* HEADER */
+header {    
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6));    
+    position: relative;
+    background-size: cover;
+    height: 1070px;
+    
+
+    video {
+        position: absolute;
+        width: 100%;
+        z-index: -99999;        
+        background-size: cover;
+    }
+
+    .fa.fa-bars {
+        font-size: 2em;
+        color: map-get($colors, white);;
+    }
+
+    .navbar {
+        position: relative;
+        background: rgba(0, 0, 0, 0.4);
+
+        .toggle {
+            position: absolute;
+            right: 10%;
+            top: 45%;
+            display: none;
+        }
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        nav {
+            display: block;
+            margin: 40px 0;
+
+            ul {
+                margin-right: 10%;
+
+                li {
+                    display: inline-block;
+                    color: map-get($colors, white);;
+                    list-style-type: none;
+                    text-decoration: none;
+                    padding: 0 25px;
+                    line-height: 35px;
+                    border:1px solid transparent;
+                    
+                }
+
+                li:hover {
+                    border-bottom: 1px solid map-get($colors, blue);             
+                    color: map-get($colors, blue);                            
+                }
+            }
+        }
+
+        .fa.fa-search {
+            color: map-get($colors, white);;
+            font-size: 24px;
+            margin-top: 40px;
+        }
+        
+    }
+    
+
+    .title {
+        height: 250px;
+        margin-top: 18rem;
+
+        h1 {
+            color: map-get($colors, white);;
+            margin-bottom:20px;
+            span {
+                color: map-get($colors, blue);
+            }
+        }
+
+        h4 {
+            color: map-get($colors, white);;
+            margin-bottom:60px;
+        }
+
+        .link_btn{
+            margin-bottom: 150px;
+        }
+        
+    }
+    
+}
+
+
+/*  MEDIA QUERIES */
+@media only screen and (max-width: 48em) {
+
+    header {
+
+        .banner .title {
+            padding: 0 20px;
+            margin:100px 0;
+        }
+
+        .navbar {
+
+            .toggle {
+               display: block;
+               top: 45px;
+           }
+
+           nav {
+               display: block;
+               margin: 0;
+               
+               ul {
+                   display: none;
+                   width: 100%;
+
+                   li {
+                       display: block;
+                       padding: 10px 0;
+                   }
+
+                   a {
+                       text-decoration: none;
+                       display: block;
+                   }
+               } 
+               
+               .active {
+                   display: block;
+               }        
+           }
+       }
+
+        h4 {
+            margin: 5% 0;
+        }
+
+        nav {
+
+            display: block;
+
+            ul {
+                display: none;
+                width: 100%;
+                margin: 0;
+
+                li {
+                    display: block;
+                    padding: 20px 0;
+                }
+            }
+
+            a {
+                text-decoration: none;
+            }
+        }
+
+        .fa.fa-search {
+            display: none;
+            text-align: right;
+            margin: 0 10% 0 0;
+        }
+
+        .active {
+            display: block;
+        }
+
+        .toggle {
+            display: block;
+            top: 88px;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 767px) {
+
+    /* HEADER */
+    header {
+        position: relative;
+
+        .title {
+            margin-top: 0;
+        }
+
+        .logo {
+            margin-top: 5%;
+        }
+
+        .navbar {
+
+             .toggle {
+                display: block;
+                top: 45px;
+            }
+
+            nav {
+                display: block;
+                margin: 0;
+                
+                ul {
+                    display: none;
+                    width: 100%;
+
+                    li {
+                        display: block;
+                        padding: 10px 0;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        display: block;
+                    }
+                }
+
+                .active {
+                    display: block;
+                }        
+            }
+        }    
+        
+        .fa.fa-search {
+            color: #fff;
+            font-size: 24px;
+            position: absolute;
+            right: 10%;
+            top: -60%;
+        }
+
+        h1 {
+            font-size: 54px;
+        }
+
+        h4 {
+            padding: 5% 0;
+        }
+    }
+}

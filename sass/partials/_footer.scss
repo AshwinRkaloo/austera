@@ -1,0 +1,74 @@
+/* FOOTER */
+footer{
+    background: #000;
+
+    ul {
+        padding: 30px 0;
+        margin-left: -30px;
+
+        li {
+            display: inline-block;
+            color: map-get($colors, footer);
+        }
+
+        a {
+            padding-left: 4%;
+            font-weight: 800;
+
+            &:hover{
+                color: map-get($colors, blue);
+            }
+        }
+
+    }
+
+    p {
+        color: map-get($colors, footer);
+        padding: 6% 0;
+        text-align: right;
+    }
+}
+
+
+/*  MEDIA QUERIES */
+@media only screen and (max-width: 48em) {
+
+    footer {
+
+        p {
+            padding: 6% 10%;
+            text-align: center;
+        }
+
+        ul {
+
+            padding: 6% 0 0;
+
+            a {
+                padding-left: 12px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 40em) {
+    footer {
+        ul {
+            padding: 0;
+
+            li {
+                display: block;
+            }
+
+            a {
+                text-decoration: none;
+                color: map-get($colors, text);
+            }
+        }
+
+        p {
+            text-align: center;
+            padding: 0 10px;
+        }
+    }
+}

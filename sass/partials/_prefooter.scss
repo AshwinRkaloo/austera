@@ -1,0 +1,151 @@
+/* PREFOOTER */
+section#prefooter {
+    background: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9)), url('../img/prefooter.png') no-repeat;
+    background-size: cover;
+
+    span {
+        color: map-get($colors, blue);
+    }
+
+    .contact_info {
+
+        ul {
+            margin: 50px -30px;
+
+            li {
+                list-style-type: none;
+                padding-left: 4%;
+                display: inline-block;
+            }
+        }
+
+        h1 {
+            color: map-get($colors, white);
+            margin: 100px 0 40px;
+            
+        }
+
+        h4 {
+            color: map-get($colors, text);
+            font-size: 28px;
+            font-weight: 300;
+            line-height: 36px;
+            padding-bottom: 15px;
+        }
+
+        p {
+            font-size: 16px;
+            margin: 50px 0 20px;
+        }
+        
+    }
+
+    input[type='name'] {
+        background: rgba(0,0,0,0.1);
+        border: 1px solid map-get($colors, footer);
+        @include border-radius(8px);
+        color: map-get($colors, white);;
+        padding: 20px 25px;
+        width: 90%;
+        margin-top: 110px;
+    }
+
+    input[type='email'] {
+        background: rgba(0,0,0,0.1);
+        border: 1px solid map-get($colors, footer);
+        @include border-radius(8px);
+        color: map-get($colors, white);;
+        padding: 20px 25px;
+        width: 90%;
+        margin-top: 30px;
+    }
+
+    textarea {
+        background: rgba(0,0,0,0.1);
+        @include border-radius(8px);
+        color: map-get($colors, white);;
+        width: 90%;
+        padding: 20px 25px 100px;
+        margin-top: 30px;
+        font-size: 16px;
+    }
+
+    input[type='submit'] {
+        background: map-get($colors, blue);
+        color: map-get($colors, white);;
+        padding: 15px 25px;
+        border-width: 0;
+        @include border-radius(50px);
+        margin: 30px auto 60px;
+        width: 150px;
+    }
+    
+}
+
+
+/*  MEDIA QUERIES */
+@media only screen and (max-width: 48em) {
+    
+    section#prefooter {
+
+        input[type='name'] {
+            width: 80%;
+        }
+
+        input[type='email'] {
+            width: 80%;
+        }
+
+        textarea {
+            width: 80%;
+        }
+
+        .contact_info ul {
+            margin: 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 40em) {
+    section#prefooter { 
+
+        .contact_info {
+
+            h1 {
+                font-size: 50px;
+                margin: 60px 0;
+            }
+
+            h4 {
+                font-size: 20px;
+            }
+
+            ul {
+                margin: 30px 0 10px;
+                li {
+                    display: inline-block;
+                    margin-bottom:10px;
+                }
+            }
+        }
+
+        input[type='name'] {
+            padding: 20px 25px;
+            width: 70%;
+            margin-top: 0;
+        }
+
+        input[type='email'] {
+            padding: 20px 25px;
+            width: 70%;
+            margin-top: 25px;
+        }
+        
+        textarea {
+            width: 70%;
+            padding: 20px 25px 100px;
+            margin-top: 25px;
+        }
+    }
+
+}
