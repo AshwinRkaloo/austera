@@ -10,7 +10,7 @@ header {
         position: absolute;
         width: 100%;
         z-index: -99999;        
-        background-size: cover;
+        object-fit : cover;
     }
 
     .fa.fa-bars {
@@ -37,28 +37,32 @@ header {
         }
 
         nav {
-            display: block;
-            margin: 40px 0;
+            margin: 20px 0;
 
             ul {
+                display: inline-block;
                 margin-right: 10%;
 
                 li {
-                    display: inline-block;
-                    color: map-get($colors, white);;
-                    list-style-type: none;
-                    text-decoration: none;
-                    padding: 0 25px;
-                    line-height: 35px;
-                    border:1px solid transparent;
-                    
-                }
+					display: inline-block;
+					
+					a {
+						color: map-get($colors, white);
+						list-style-type: none;
+						text-decoration: none;
+						padding: 10px 25px;
+						line-height: 35px;
+						border:1px solid transparent;
 
-                li:hover {
-                    border-bottom: 1px solid map-get($colors, blue);             
-                    color: map-get($colors, blue);                            
-                }
-            }
+						&:hover {
+							border-bottom: 1px solid map-get($colors, blue);             
+							color: map-get($colors, blue);							
+							margin: 0 auto; 
+							
+						}
+					}
+				}
+            }            
         }
 
         .fa.fa-search {
@@ -97,13 +101,19 @@ header {
 
 
 /*  MEDIA QUERIES */
-@media only screen and (max-width: 48em) {
+@media only screen and (max-width: 1199px) {
 
     header {
 
-        .banner .title {
+		height: 100vh;
+
+		video {
+			height: 100vh;
+		}
+
+        .title {
             padding: 0 20px;
-            margin:100px 0;
+            margin-top: 20px;
         }
 
         .navbar {
@@ -113,8 +123,11 @@ header {
                top: 45px;
            }
 
+           .logo {
+                padding: 20px 0;
+           }
+
            nav {
-               display: block;
                margin: 0;
                
                ul {
@@ -235,7 +248,7 @@ header {
         }
 
         h1 {
-            font-size: 54px;
+            font-size: 30px;
         }
 
         h4 {

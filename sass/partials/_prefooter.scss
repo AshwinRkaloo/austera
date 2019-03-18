@@ -15,7 +15,7 @@ section#prefooter {
             li {
                 list-style-type: none;
                 padding-left: 4%;
-                display: inline-block;
+				display: inline-block;
             }
         }
 
@@ -40,68 +40,70 @@ section#prefooter {
         
     }
 
-    input[type='name'] {
-        background: rgba(0,0,0,0.1);
-        border: 1px solid map-get($colors, footer);
-        @include border-radius(8px);
-        color: map-get($colors, white);;
-        padding: 20px 25px;
-        width: 90%;
-        margin-top: 110px;
-    }
+    #myform {
+		margin-top: 100px;
 
-    input[type='email'] {
-        background: rgba(0,0,0,0.1);
-        border: 1px solid map-get($colors, footer);
-        @include border-radius(8px);
-        color: map-get($colors, white);;
-        padding: 20px 25px;
-        width: 90%;
-        margin-top: 30px;
-    }
+		input[type='name'], input[type='email'] {
+			background: rgba(0,0,0,0.1);
+			border: 1px solid map-get($colors, footer);
+			@include border-radius(8px);
+			color: map-get($colors, white);
+			padding: 20px 25px;
+			width: 90%;
+			margin: 10px 0;
+			font-family: 'Montserrat', sans-serif;
+		}
 
-    textarea {
-        background: rgba(0,0,0,0.1);
-        @include border-radius(8px);
-        color: map-get($colors, white);;
-        width: 90%;
-        padding: 20px 25px 100px;
-        margin-top: 30px;
-        font-size: 16px;
-    }
+		textarea {
+			background: rgba(0,0,0,0.1);
+			@include border-radius(8px);
+			color: map-get($colors, white);
+			width: 90%;
+			padding: 20px 25px 100px;
+			margin-top: 10px;
+			font-size: 16px;
+			font-family: 'Montserrat', sans-serif;
+		}
 
-    input[type='submit'] {
-        background: map-get($colors, blue);
-        color: map-get($colors, white);;
-        padding: 15px 25px;
-        border-width: 0;
-        @include border-radius(50px);
-        margin: 30px auto 60px;
-        width: 150px;
-    }
+		a.link_btn {
+			
+			margin-top: 30px;
+		}
+		
+    }   
+
+    
+
+    
     
 }
 
 
 /*  MEDIA QUERIES */
-@media only screen and (max-width: 48em) {
+@media only screen and (max-width: 1023px) {
     
     section#prefooter {
 
-        input[type='name'] {
-            width: 80%;
-        }
+		#myform {
+			margin-top: 20px;
 
-        input[type='email'] {
-            width: 80%;
-        }
-
-        textarea {
-            width: 80%;
-        }
+			input[type='name'] {
+				width: 80%;
+			}
+	
+			input[type='email'] {
+				width: 80%;
+			}
+	
+			textarea {
+				width: 80%;
+			}
+		}
+        
 
         .contact_info ul {
-            margin: 0;
+			
+            margin: 20px 0;
         }
     }
 }

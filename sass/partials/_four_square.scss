@@ -1,5 +1,5 @@
 /* SECTION FOUR_SQUARE */
-section#four_square{
+section#four_square {
 
     .photo {
         height: 430px;
@@ -54,17 +54,19 @@ section#four_square{
 }
 
 /*  MEDIA QUERIES */
-@media only screen and (max-width: 48em) {
+@media only screen and (max-width: 1023px) {
 
     section#four_square {
 
         h3 {
-            padding: 30% 15%;
+
+            padding: 20px 40px;
         }
 
-        .photo1,.photo2,.photo3,.photo4 {
-            width: 65%;
-            margin: 20px auto;
+        .photo {
+
+            background-size: cover;
+            
         }
     }
 }
@@ -75,11 +77,6 @@ section#four_square{
 
         h3 {
             padding: 30% 15%;
-        }
-        
-        .photo1,.photo2,.photo3,.photo4 {
-            width: 78%;
-            margin: 20px auto;
         }
     }
 }
